@@ -1,7 +1,7 @@
 # Random number Generator
 
 This project is a random number generator. The user defined a minimum and a maximum number, then he clicks on the "generate" button. After that the application generate a random number belonging to the user-defined interval. \
-The live version in here : [Random number generator - Fanantenana Emmanuel](https://manu3609.github.io/CP_Company_Integration/)
+The live version in here : [Random number generator - Fanantenana Emmanuel](https://manu3609.github.io/Random-number-generator/)
 
 ## Screenshot
 
@@ -21,7 +21,7 @@ I like to lose myself scrolling on Pinterest, and once, I saw designs on scrolli
 
 To install this project, simply clone the Git repository on your local machine.
 
-`git clone https://github.com/Manu3609/CP_Company_Integration.git`
+`git clone https://github.com/Manu3609/Random-number-generator.git`
 
 
 ## Usage
