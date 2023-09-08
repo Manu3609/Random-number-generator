@@ -1,0 +1,176 @@
+:root {
+    --DarkGrey : #29282D;
+    --Grey : #3D3E42;
+    --LightGrey : #898A8E;
+    --Green : #9ADE0F;
+    --DarkGreen : #88C40D;
+    --Red : #FF6347;
+    --ProductSansRegular : Product Sans Regular;
+    --ProductSansBold : Product Sans Bold;
+    --ProductSansItalic : Product Sans Italic;
+    --ProductSansBoldItalic : Product Sans BoldItalic;
+}
+@font-face {
+    font-family: Product Sans Regular;
+    src: url(../fonts/Product\ Sans\ Regular.ttf);
+}
+@font-face {
+    font-family: Product Sans Bold;
+    src: url(../fonts/Product\ Sans\ Bold.ttf);
+}
+@font-face {
+    font-family: Product Sans Italic;
+    src: url(../fonts/Product\ Sans\ Italic.ttf);
+}
+@font-face {
+    font-family: Product Sans BoldItalic;
+    src: url(../fonts/Product\ Sans\ Bold\ Italic.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    font-family: var(--ProductSansRegular);
+    color: var(--LightGrey);
+    position: relative;
+    min-height: 100vh;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--DarkGrey);
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid gray; */
+}
+.box p span {
+    font-family: var(--ProductSansBold);
+}
+.box form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.box form .inputs {
+    display: flex;
+    gap: 1.2rem;
+    margin-block: 2rem;
+}
+.box form .inputs .input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .2rem;
+}
+.box form .inputs .input input {
+    font-family: var(--ProductSansRegular);
+    text-align: center;
+    padding: .5rem;
+    font-size: 1.2rem;
+    width: 7.5rem;
+    border: 1px solid var(--LightGrey);
+    color: var(--LightGrey);
+    border-radius: 10rem;
+    background: var(--DarkGrey);
+}
+.box form .inputs .input input.error {
+    border: 1px solid var(--Red);
+}
+.box form .inputs .input input::-webkit-outer-spin-button,
+.box form .inputs .input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.box form .inputs .input input[type="number"] {
+    -moz-appearance: textfield;
+}
+.box form .inputs .input input[type="number"]:focus {
+    outline: none;
+    border: 1px solid var(--Green);
+}
+.box form .inputs .input .errorText,
+.box form .inputs .input .negativeText {
+    font-size: .8rem;
+    color: var(--Red);
+    display: none;
+    transition: .5s ease;
+}
+.box form .inputs .input .errorText.show,
+.box form .inputs .input .negativeText.show {
+    display: block;
+}
+.box form .inputs label {
+    font-size: 1rem;
+    transition: .5s ease;
+}
+.box form .inputs label.error {
+    color: var(--Red);
+}
+.numberContainer {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    height: 8.5rem;
+    margin-block: 1rem;
+    overflow: hidden;
+    /* border: 1px solid red; */
+}
+.numbers {
+    font-size: 8.5rem;
+    font-family: var(--ProductSansBold);
+    transition: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    transform: translateY(-2%);
+}
+.numbers.isGenerated {
+    transform: translateY(-83%);
+    transition: 1s ease;
+}
+.box form button {
+    font-family: inherit;
+    margin-block: 1.5rem;
+    padding: .8rem 3rem;
+    font-size: 1.5rem;
+    border: none;
+    background: var(--Green);
+    color: var(--Grey);
+    transition: .5s ease;
+    border-radius: 10rem;
+    cursor: pointer;
+}
+.box form button:hover {
+    background: var(--DarkGreen);
+}
+.socials {
+    background: var(--Grey);
+    position: absolute;
+    left: 0;
+    padding: 2rem .8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
+    border-top-right-radius: .6rem;
+    border-bottom-right-radius: .6rem;
+}
+.socials a svg {
+    color: var(--LightGrey);
+    transition: .5s ease;
+}
+.socials a svg:hover {
+    color: var(--Green);
+}
