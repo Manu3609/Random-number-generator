@@ -49,10 +49,9 @@ const randomNumber = (min, max) => {
     setTimeout(() => {numbersContainer.classList.remove("isGenerated")}, 1000)
 }
 form.addEventListener("submit", (e) => {
-    min = minInput.value
-    max = maxInput.value
+    min = Math.floor(minInput.value)
+    max = Math.floor(maxInput.value)
     e.preventDefault()
-    let validator = 0
     if (min >= max) {
         minErrorText.classList.add("show")
         maxErrorText.classList.remove("show")
@@ -73,7 +72,6 @@ form.addEventListener("submit", (e) => {
         maxInput.classList.remove("error")
         minNegativeText.classList.remove("show")
         maxNegativeText.classList.remove("show")
-        validator += 1
     }
     if (min < 0) {
         minErrorText.classList.remove("show")
@@ -95,7 +93,6 @@ form.addEventListener("submit", (e) => {
         maxInput.classList.remove("error")
         minNegativeText.classList.remove("show")
         maxNegativeText.classList.remove("show")
-        validator += 1
     }
     if (max < 0) {
         minErrorText.classList.remove("show")
@@ -117,13 +114,7 @@ form.addEventListener("submit", (e) => {
         maxInput.classList.remove("error")
         minNegativeText.classList.remove("show")
         maxNegativeText.classList.remove("show")
-        validator += 1
     }
-    // if (validator < 3) {
-    //     numbers[0].innerHTML = "- -"
-    //     console.log('error')
-    // }
-    console.log("validator :" + validator)
     randomNumber(min, max)
     numbersContainer.classList.add("isGenerated")
     console.log(arrayNumber + " min:" + min + " max:" + max)
