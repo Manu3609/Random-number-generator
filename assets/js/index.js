@@ -13,8 +13,8 @@ const maxLabel = document.querySelector("#maxLabel")
 let arrayNumber = []
 let x = 0
 let y = 0
-let min = 00
-let max = 00
+let min = 0
+let max = 0
 numbersContainer.classList.remove("isGenerated")
 const randomNumber = (min, max) => {
     arrayNumber = []
